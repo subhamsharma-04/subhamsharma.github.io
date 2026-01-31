@@ -3,90 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Subham Sharma | Backend Engineer</title>
+  <title>Subham Sharma | Senior Software Engineer</title>
+
   <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --tag-bg: #e5e7eb;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: #1e293b;
+      --accent: #60a5fa;
+      --tag-bg: #1e293b;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f7f9fc;
-      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 980px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 48px 20px;
     }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     h1 {
-      margin-bottom: 5px;
+      margin: 0;
+      font-size: 38px;
     }
+
     h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      margin-top: 56px;
+      font-size: 26px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 6px;
     }
-    a {
-      color: #2563eb;
-      text-decoration: none;
+
+    h3 {
+      margin-top: 28px;
+      font-size: 18px;
+      color: var(--muted);
     }
+
+    p {
+      max-width: 900px;
+    }
+
     ul {
       padding-left: 20px;
+      max-width: 900px;
     }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .toggle {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: var(--card);
+      font-size: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
     .tag {
       display: inline-block;
-      background: #e5e7eb;
-      padding: 4px 8px;
-      margin: 4px 4px 4px 0;
-      border-radius: 4px;
+      background: var(--tag-bg);
+      padding: 6px 12px;
+      margin: 6px 6px 0 0;
+      border-radius: 999px;
       font-size: 14px;
+    }
+
+    .links {
+      margin-top: 8px;
+    }
+
+    .footer {
+      margin-top: 72px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>Subham Sharma</h1>
-    <p>
-      Senior Backend Engineer • Java • Distributed Systems • Kubernetes  
-      <br/>
-      📍 Bengaluru | ✉️ <a href="mailto:subhamsharma1782@gmail.com">subhamsharma1782@gmail.com</a>
-    </p>
 
-    <p>
-      <a href="https://github.com/subhamsharma">GitHub</a> |
-      <a href="https://www.linkedin.com/in/your-link">LinkedIn</a>
-    </p>
+    <div class="header">
+      <div>
+        <h1>Subham Sharma</h1>
+        <div class="meta">
+          Staff Backend Engineer • Distributed Systems • Kubernetes • Observability
+          <br/>
+          Bengaluru •
+          <a href="mailto:subhamsharma1782@gmail.com">subhamsharma1782@gmail.com</a>
+        </div>
+        <div class="links">
+          <a href="https://github.com/subhamsharma">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/subham-sharma-b81336129/">LinkedIn</a>
+        </div>
+      </div>
 
-    <h2>About</h2>
-    <p>
-      Backend engineer with 8+ years of experience building scalable platforms,
-      distributed systems, and managed services. Strong background in Java,
-      Kubernetes, observability (Loki, Grafana, VictoriaMetrics), and cost-efficient
-      multi-tenant architectures.
-    </p>
-
-    <h2>Experience Highlights</h2>
-    <ul>
-      <li>Designed and implemented a multi-tenancy model reducing infrastructure costs by ~60%.</li>
-      <li>Built Java backend onboarding services for Grafana, Loki, and VictoriaMetrics.</li>
-      <li>Scaled Loki as a managed service across 50+ Kubernetes clusters.</li>
-      <li>Defined ingestion and stream-based T-shirt sizing to streamline onboarding.</li>
-    </ul>
-
-    <h2>Tech Stack</h2>
-    <div>
-      <span class="tag">Java</span>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">Kafka</span>
-      <span class="tag">Kubernetes</span>
-      <span class="tag">Docker</span>
-      <span class="tag">Microservices</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">Observability</span>
+      <div class="toggle" onclick="toggleTheme()">🌙 Dark Mode</div>
     </div>
 
-    <h2>Resume</h2>
-    <p>
-      <a href="Subham_Sharma_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-    </p>
+    <div class="card">
+      <h2>Professional Summary</h2>
+      <p>
+        Staff-level backend engineer with 8+ years of experience designing,
+        building, and operating large-scale distributed systems. Deep expertise
+        in Java, Kubernetes, and observability platforms. Proven ability to
+        drive end-to-end ownership — from ambiguous problem spaces and system
+        design through execution, production rollout, and long-term operational excellence.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Technical Leadership & Ownership</h2>
+      <ul>
+        <li>Owned complex backend and platform initiatives end-to-end, from requirement discovery and architecture design to implementation, rollout, and sustained operations.</li>
+        <li>Led technical design reviews, influenced architectural decisions, and raised engineering standards across teams.</li>
+        <li>Partnered with product, SRE, and leadership stakeholders to translate business goals into scalable technical solutions.</li>
+        <li>Drove operational excellence through capacity planning, monitoring, alerting, and on-call ownership.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Impact Highlights</h2>
+      <ul>
+        <li>Architected a multi-tenant platform model that reduced infrastructure costs by ~60% through shared, highly optimized deployments.</li>
+        <li>Designed and built Java-based onboarding services for Grafana, Loki, and VictoriaMetrics, enabling automated tenant provisioning at scale.</li>
+        <li>Led Kubernetes-based deployment and lifecycle management of Loki clusters across multiple environments.</li>
+        <li>Scaled Loki as a managed observability service supporting 50+ production clusters.</li>
+        <li>Defined ingestion and stream-based T-shirt sizing models, standardizing capacity planning and accelerating customer onboarding.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Technology Stack</h2>
+
+      <h3>Backend & Datastores</h3>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Microservices</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+
+      <h3>Messaging & Streaming</h3>
+      <div class="tags">
+        <span class="tag">Kafka</span>
+        <span class="tag">Event-Driven Systems</span>
+      </div>
+
+      <h3>Observability & Telemetry</h3>
+      <div class="tags">
+        <span class="tag">Grafana</span>
+        <span class="tag">Loki</span>
+        <span class="tag">Tempo</span>
+        <span class="tag">VictoriaMetrics</span>
+        <span class="tag">Prometheus</span>
+      </div>
+
+      <h3>Platform & Infrastructure</h3>
+      <div class="tags">
+        <span class="tag">Kubernetes</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Helm</span>
+        <span class="tag">Cloud-Native Architecture</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>System Design Focus</h2>
+      <ul>
+        <li>Designing scalable, fault-tolerant distributed systems</li>
+        <li>High-throughput ingestion and streaming pipelines</li>
+        <li>Multi-tenant isolation, quotas, and cost-aware capacity planning</li>
+        <li>Observability-driven debugging, reliability, and performance optimization</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Resume</h2>
+      <p>
+        <a href="Subham_Sharma_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      © Subham Sharma • Built with GitHub Pages
+    </div>
+
   </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme",
+        document.body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
 </body>
 </html>
